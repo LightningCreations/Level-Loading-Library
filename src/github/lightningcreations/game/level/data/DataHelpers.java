@@ -10,6 +10,9 @@ final class DataHelpers {
 	private static final Map<ResourceName,Data.Reader> spriteDataReaders = new TreeMap<>();
 	private static final Map<ResourceName,Data.Reader> triggerDataReaders = new TreeMap<>();
 	
+	static {
+		new SpriteDataCollisionBox.Reader("omgdc:tile_group/aabb_sprite", spriteDataReaders);
+	}
 	
 	private DataHelpers() {
 		// TODO Auto-generated constructor stub
